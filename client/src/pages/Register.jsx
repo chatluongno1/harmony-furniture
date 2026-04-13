@@ -7,8 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../css/auth.css';
 
 const Register = () => {
-    // Địa chỉ API local
-    const API_URL = "http://localhost:5000/api/auth";
+    // Đã thay đổi: Trỏ về API thực tế trên Render để ai cũng dùng được
+    const API_URL = "https://harmony-api-t9h0.onrender.com/api/auth";
 
     const [formData, setFormData] = useState({
         fullName: '',
@@ -53,7 +53,6 @@ const Register = () => {
         return Object.keys(newErrors).length === 0;
     };
 
-    // --- HÀM ĐĂNG KÝ (Đã đổi sang API Render) ---
     const handleRegister = async (e) => {
         e.preventDefault();
         if (!validate()) return;

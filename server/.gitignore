@@ -1,0 +1,24 @@
+# Bỏ qua thư mục node_modules ở mọi nơi
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Bỏ qua các file build của Frontend (Vite thường build ra thư mục dist)
+dist/
+client/dist/
+build/
+client/build/
+
+# Bỏ qua file biến môi trường chứa pass/key bí mật
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Bỏ qua các file log và file rác của hệ điều hành
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db

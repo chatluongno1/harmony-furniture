@@ -5,6 +5,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import 'dotenv/config'; 
+import process from 'process';
 
 // Import cấu hình DB
 import db from './src/configs/db.js'; 
@@ -78,6 +79,7 @@ app.use((req, res) => {
 });
 
 // --- GLOBAL ERROR HANDLER ---
+// eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
     console.error('🔥 LỖI HỆ THỐNG:', err.stack);
     res.status(500).json({

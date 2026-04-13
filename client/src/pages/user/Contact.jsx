@@ -31,7 +31,7 @@ const Contact = () => {
                 message: formData.message
             };
 
-            await axios.post('https://harmony-api-t9h0.onrender.com/api/contacts/send', payload); 
+            await axios.post('http://localhost:5000/api/contacts/send', payload);
             
             toast.success('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.');
             setFormData({ name: '', email: '', phone: '', message: '' }); 
